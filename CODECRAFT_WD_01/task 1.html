@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome To My World</title>
+  <style>
+    /* Reset default style */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      height: 2000px;
+      background: #0f0f0f;
+      color: white;
+      padding-top: 70px;
+      scroll-behavior: smooth;
+    }
+
+    /* Navigation styles */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: linear-gradient(90deg, #1a1a1a, #0f0f0f);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 40px;
+      height: 70px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+      z-index: 1000;
+      transition: all 0.4s ease;
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+
+    nav.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #ff4d4d;
+      letter-spacing: 1px;
+      text-shadow: 0 0 10px #ff4d4d88;
+    }
+
+    .menu {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    /* Hover underline animation */
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #ffcc00;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    /* Scrolled navbar style */
+    nav.scrolled {
+      background: linear-gradient(90deg, #111, #222);
+      box-shadow: 0 4px 10px rgba(255, 204, 0, 0.4);
+    }
+
+    /* Example content */
+    section {
+      padding: 60px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #ffcc00;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav id="navbar">
+    <div class="logo">🔥 DashBoard</div>
+    <div class="menu">
+      <a href="#">Home</a>
+      <a href="#">Features</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Example Content -->
+  <section>
+    <h1>Welcome to My World</h1>
+    <p>Scroll to experience interactive effects. Hover over menu items to see them glow and animate. The navbar stays with you and adapts as you scroll!</p>
+  </section>
+
+  <section>
+    <h1>More Content</h1>
+    <p>Keep scrolling to see how the nav bar changes style after scrolling.</p>
+  </section>
+
+  <!-- JavaScript Interactivity -->
+  <script>
+    const navbar = document.getElementById('navbar');
+
+    // Slide in navbar on page load
+    window.addEventListener('load', () => {
+      navbar.classList.add('show');
+    });
+
+    // Change navbar style when scrolled
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
