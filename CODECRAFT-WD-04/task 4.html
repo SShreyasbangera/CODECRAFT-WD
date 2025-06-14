@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shreyas Bangera | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Montserrat&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+      color: #fff;
+    }
+    header {
+      padding: 60px 20px;
+      text-align: center;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px rgba(0,255,255,0.3);
+    }
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
+      color: #00fff0;
+      text-shadow: 0 0 10px #00fff0;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      color: #ddd;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section h2 {
+      font-size: 2rem;
+      color: #ffcc00;
+      margin-bottom: 20px;
+      text-shadow: 0 0 5px #ffcc00;
+    }
+    .about, .skills, .projects {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 40px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.1);
+      display: none;
+      animation: fadeInUp 1s ease forwards;
+    }
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .about img {
+      width: 150px;
+      border-radius: 50%;
+      border: 3px solid #00fff0;
+      margin-bottom: 20px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .project-card {
+      background: rgba(255, 255, 255, 0.07);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 15px 0;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .project-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 15px #00ffcc88;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #999;
+      font-size: 0.9rem;
+      background: rgba(255,255,255,0.05);
+    }
+    .socials a {
+      color: #00fff0;
+      margin: 0 10px;
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .socials a:hover {
+      color: #ffcc00;
+    }
+    .resume-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #00fff0;
+      color: #000;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 0 10px #00fff0;
+      transition: all 0.3s;
+    }
+    .resume-button:hover {
+      background: #ffcc00;
+      color: #000;
+      box-shadow: 0 0 15px #ffcc00;
+    }
+    nav {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .nav-button {
+      background: transparent;
+      border: 2px solid #00fff0;
+      color: #00fff0;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin: 10px;
+      transition: 0.3s;
+    }
+    .nav-button:hover {
+      background: #00fff0;
+      color: #000;
+    }
+  </style>
+  <script>
+    function toggleSection(sectionClass) {
+      document.querySelectorAll('.about, .skills, .projects').forEach(s => s.style.display = 'none');
+      const section = document.querySelector(`.${sectionClass}`);
+      section.style.display = 'block';
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>S Shreyas Bangera</h1>
+    <p>🚀 Aspiring Full Stack Developer | AI Enthusiast | Coding Explorer</p>
+    <div class="socials">
+      <a href="https://github.com/SShreyasbangera/Techguy.git" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/shreyas-bangera-2b5a01297" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:shreyasbangera578@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+    <a class="resume-button" href="resume.pdf" download>📄 Download Resume</a>
+    <nav>
+      <button class="nav-button" onclick="toggleSection('about')">About Me</button>
+      <button class="nav-button" onclick="toggleSection('skills')">Skills</button>
+      <button class="nav-button" onclick="toggleSection('projects')">Projects</button>
+    </nav>
+  </header>
+
+  <section class="about">
+    <h2>About Me</h2>
+    <center><img src="C:\Users\drmal\OneDrive\Pictures\Desktop\Codecraft\IMG-20250128-WA0001.jpg" alt="Profile Picture"></center>
+    <p>Hello there! I'm <strong>S Shreyas Bangera</strong> — an engineering dynamo on a mission to revolutionize tech with creativity, curiosity, and cutting-edge code. With a mind wired for innovation and a heart set on impact, I dive into the world of Artificial Intelligence, Web Development, and Problem Solving like it's my playground.</p>
+    <p>From crafting smart, elegant interfaces to training intelligent CNN models that recognize plants with precision — I bring code to life. Whether it's building dashing web games, identifying medicinal plants with AI, or presenting cloud-powered solutions, my focus is always on making technology beautifully functional and incredibly fun.</p>
+    <br>
+    <p><strong>Education:</strong> Engineering student specializing in Computer Science & Engineering</p>
+    <br>
+    <p><strong>Experience:</strong> Interned as a Python Developer at InternPe, built projects like Medicinal Plant Identifier (CNN + Streamlit), Smart Ingredient Scanner, and eye-catching games like Tic Tac Toe & Stopwatch with modern web tech.</p>
+  </section>
+
+  <section class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Front-End: HTML, CSS, JavaScript, React</li>
+      <li>Back-End: Python, Flask</li>
+      <li>AI/ML: CNN, Scikit-learn, Streamlit</li>
+      <li>Cloud: AWS (CloudShell, EC2 basics)</li>
+      <li>Other: Java, DSA, Git, Firebase</li>
+    </ul>
+  </section>
+
+  <section class="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>🌿 Medicinal Plant Identifier</h3>
+      <p>Used CNN and Streamlit to create a real-time image-based plant identifier. It predicts medicinal plants based on uploaded leaf images.</p>
+    </div>
+    <div class="project-card">
+      <h3>🧠 Smart Ingredient Scanner</h3>
+      <p>Built a system to categorize ingredients from food labels and compute nutrition facts using OCR and AI.</p>
+    </div>
+    <div class="project-card">
+      <h3>🎮 Dashing Tic Tac Toe & Stopwatch</h3>
+      <p>Created animated and interactive web games with glowing UI and smooth transitions using pure JS, HTML & CSS.</p>
+    </div>
+  </section>
+
+  <footer>
+    Designed with 💻 by Shreyas Bangera | Connect via GitHub, LinkedIn, or Email
+  </footer>
+</body>
+</html>
